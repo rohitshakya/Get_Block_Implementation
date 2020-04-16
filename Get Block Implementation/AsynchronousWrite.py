@@ -1,3 +1,4 @@
+#  Used only in case of 'Delayed write' case. This allows asynchronous write on the disk.
 import multiprocessing
 import BufferHeader
 import time
@@ -11,14 +12,14 @@ def _writeAsynchronously(lock,bufferDataStructure,blockNumber):
     time.sleep(4)   #sleep for 4 seconds to simulate writing to disk
     
     bufferDataStructure.clearDelayedWriteBit(blockNumber)
-    #lock.release()
+
     print("************ Asynchronous Writing of Block Number-",blockNumber," over ***************")
    
     #adding buffer to head of free list, to follow the LRU algorithm
     lock.acquire()
     bufferDataStructure.addToFreeListFirst(blockNumber)
     lock.release()
-    #print("reached",buffer.isDelayedWrite(),"pid ",os.getpid())
+
 
 def asynchronousWrite(lock,bufferDataStructure,blockNumber):
     

@@ -1,6 +1,6 @@
 import multiprocessing #threading interface
 import AsynchronousWrite
-import time
+import time #sleep()
 import os
 import BufferDataStructure
 import signal

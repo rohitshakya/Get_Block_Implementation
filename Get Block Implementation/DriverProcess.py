@@ -1,3 +1,6 @@
+# This is our driver class. It imports multiprocessing package provided by python that supports spawning processes.
+# It creates an object of BaseManager class so that the processes can access the shared objects by using proxy classes.
+
 import random
 import BufferHeader
 import multiprocessing
