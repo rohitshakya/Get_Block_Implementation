@@ -5,17 +5,19 @@ class BufferHeader(object):
         if(blockNumber==None):
             self.block_number=0       #valid block numbers are from 0 onwards
         else:
-            self.block_number=blockNumber
+            self.block_number=blockNumber  #block_number is the block number of data on the disk
 
-        self.status_locked=0
-        self.status_valid=0
-        self.status_delayed_write=0
-        self.waiting_process_count=0
+        self.status_locked=0            #status_locked indicates whether the buffer is currently locked or not
+        self.status_valid=0             #status_valid indicates whether the buffer contains valid data or not
+        self.status_delayed_write=0   #status_delayed_write indicates whether the kernel must write buffer contents to disk before reassigning the buffer or not
 
-        self.hashQ_next=self
-        self.hashQ_prev=self
-        self.freeList_next=None
-        self.freeList_prev=None
+        self.waiting_process_count=0 #waiting_process_count specifies number of processes waiting for the buffer to become free
+
+
+        self.hashQ_next=self               #pointer to next buffer on hash queue
+        self.hashQ_prev=self               #pointer to previous buffer on hash queue
+        self.freeList_next=None            #pointer to next buffer on free list
+        self.freeList_prev=None            #pointer to previous buffer on free list
 
 
     # block number manipulation

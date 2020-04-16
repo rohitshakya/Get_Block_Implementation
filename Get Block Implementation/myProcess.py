@@ -1,6 +1,6 @@
-import random
-import time
-import multiprocessing
+import random #Randomint() returns a random integer between the specified integers.
+import time   #Used for sleep() function
+import multiprocessing #threading interface
 import BufferDataStructure
 import BufferHeader
 import BufferManagement

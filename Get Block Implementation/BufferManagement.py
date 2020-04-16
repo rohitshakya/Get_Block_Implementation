@@ -1,4 +1,4 @@
-import multiprocessing
+import multiprocessing #threading interface
 import AsynchronousWrite
 import time
 import os
