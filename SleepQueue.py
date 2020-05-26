@@ -16,8 +16,7 @@ class SleepQueue(object):
 
     def getPidsWaitingForBuffer(self,buffer): 
         return self.sleepQueue.pop(buffer,-2)
-
-    #processes waiting for any buffer store -1 in buffer number
-
+        
+    #Processes waiting for any buffer has stored theor pids at index "-1"
     def getPidsWaitingForAnyBuffer(self):
         return self.sleepQueue.pop(-1,-2)
