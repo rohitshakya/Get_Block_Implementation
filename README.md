@@ -6,7 +6,7 @@ Academic project to implement Getblk. We are aiming to simulate buffer managemen
 * Scenarios of retrieval of buffer.
 * Structure of the buffer pool and buffer header.
 * Algorithms for Reading and writing disk blocks.
-* Working in Multiprocessing environment of a computer application.</p>
+* Working in Multiprocessing environment of a computer application.
 * January 2020 - March 2020  
 
 ## Language used : 
