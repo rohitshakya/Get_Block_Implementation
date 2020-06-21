@@ -2,8 +2,7 @@
 
 <br>
 
-Academic project to implement Getblk. We are aiming to simulate buffer management in UNIX system. This project was my first application in Msc in Operating System.<br>
-            By developing this project I assimilate and learnt about:
+Academic project to implement Getblk. We are aiming to simulate buffer management in UNIX system. This project was my first application in Msc in Operating System. By developing this project I assimilate and learnt about:
           <br>Scenarios of retrieval of buffer.
           <br>Structure of the buffer pool and buffer header.
           <br>Algorithms for Reading and writing disk blocks.
